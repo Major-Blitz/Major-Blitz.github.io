@@ -631,15 +631,11 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 <div class="widget">
   <ul>
     
-    <a href="../undefined/test/">
-      <li>test</li>
-    </a>
-    
-    <a href="../cn/Hexo-Theme-LiveMyLife/">
+    <a href="Hexo-Theme-LiveMyLife/">
       <li>Hexo-Theme-LiveMyLife</li>
     </a>
     
-    <a href="Hexo-Theme-LiveMyLife/">
+    <a href="../cn/Hexo-Theme-LiveMyLife/">
       <li>Hexo-Theme-LiveMyLife</li>
     </a>
     
@@ -669,7 +665,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/04/">April 2020</a><span class="archive-list-count">2</span></li></ul>
 </div>
 
 
@@ -803,7 +799,7 @@ This LiveMyLife theme created by Vincent modified from the original Porter YenYu
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content='Never give up!,Attitude is a little thing that makes a big difference.,I never worry about action but only about inaction.,I like a man who grins when he fights.,Courage is going from failure to failure without losing enthusiasm...,Kites rise highest against the wind but not with it...,An optimist sees the opportunity in every difficulty...,No crime is so great as daring to excel...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='Never give up!,Attitude is a little thing that makes a big difference.,I never worry about action but only about inaction.,I like a man who grins when he fights.,Courage is going from failure to failure without losing enthusiasm.,Kites rise highest against the wind but not with it.,An optimist sees the opportunity in every difficulty.,No crime is so great as daring to excel.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99'></script>
   
 
   
@@ -1192,5 +1188,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

@@ -479,11 +479,9 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/cn/Hexo-Theme-LiveMyLife/">
+          <a href="/en/Hexo-Theme-LiveMyLife/">
             <h2 class="post-title">
               Hexo-Theme-LiveMyLife
-              
-              -- cn
               
             </h2>
             
@@ -501,9 +499,11 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
         <div class="post-preview">
-          <a href="/en/Hexo-Theme-LiveMyLife/">
+          <a href="/cn/Hexo-Theme-LiveMyLife/">
             <h2 class="post-title">
               Hexo-Theme-LiveMyLife
+              
+              -- cn
               
             </h2>
             
@@ -628,7 +628,7 @@
 
   
     <!-- Mouseclick -->
-    <script type="text/javascript" src="/js/mouseclick.js" content='Never give up!,Attitude is a little thing that makes a big difference.,I never worry about action but only about inaction.,I like a man who grins when he fights.,Courage is going from failure to failure without losing enthusiasm...,Kites rise highest against the wind but not with it...,An optimist sees the opportunity in every difficulty...,No crime is so great as daring to excel...' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99'></script>
+    <script type="text/javascript" src="/js/mouseclick.js" content='Never give up!,Attitude is a little thing that makes a big difference.,I never worry about action but only about inaction.,I like a man who grins when he fights.,Courage is going from failure to failure without losing enthusiasm.,Kites rise highest against the wind but not with it.,An optimist sees the opportunity in every difficulty.,No crime is so great as daring to excel.' color='#9933CC,#339933,#66CCCC,#FF99CC,#CCCCFF,#6666CC,#663399,#66CC99'></script>
   
 
   
@@ -1017,5 +1017,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
