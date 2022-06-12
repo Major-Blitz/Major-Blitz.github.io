@@ -237,17 +237,6 @@
           
           
           <li>
-            <a href="/categories/">
-              
-              CATEGORIES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
             <a href="/archive/">
               
               ARCHIVES
@@ -259,9 +248,9 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/categories/">
               
-              ABOUT
+              CATEGORIES
               
               
             </a>
@@ -273,6 +262,17 @@
             <a href="/tags/">
               
               TAGS
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/about/">
+              
+              ABOUT
               
               
             </a>
@@ -398,7 +398,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">316</span> In Total
+              Words <span class="post-count">320</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -460,24 +460,29 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>写在前面：<br>
-web安全作为前端的必会八股，在面试中的考察频率非常高，之前面试的时候就被问到了，还记得如下的对话。<br>
+        <h3 id="写在前面：">写在前面：</h3>
+<p>web安全作为前端的必会八股，在面试中的考察频率非常高，之前面试的时候就被问到了，还记得如下的对话。<br>
 面试官：聊一下常见的web安全<br>
 我：有CSRF，balabala、XSS，bababa…<br>
 面试官：嗯，我看你是学安全的，有实现过吗？<br>
 我：还没有😳</p>
 <p>所以正好借着这次做实验来简单写写🤪</p>
 <h3 id="什么是CSRF？">什么是CSRF？</h3>
-<p>跨站请求伪造（Cross Site Request Forgery），是一种劫持受信任用户向服务器发送非预期请求的攻击方式。通常情况下，CSRF 攻击是攻击者借助受害者的Cookie骗取服务器的信任，可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击服务器，从而在并未授权的情况下执行在权限保护之下的操作。<img src="/http://yoursite-url//C:%5CUsers%5C86158%5CDesktop%5CmyBlog%5Csource_posts%5Cundefined%5Ccsrf%5Cv2-b41e31b83de62e7e0307c2c3761c85f5_1440w.jpg" alt="什么是CSRF攻击？如何防御CRSF攻击？"></p>
-<p>如图所示，受害者会</p>
+<p>跨站请求伪造（Cross Site Request Forgery），是一种劫持受信任用户向服务器发送非预期请求的攻击方式。通常情况下，CSRF 攻击是攻击者借助受害者的Cookie骗取服务器的信任，可以在受害者毫不知情的情况下以受害者名义伪造请求发送给受攻击服务器，从而在并未授权的情况下执行在权限保护之下的操作。<br>
+<img src="/undefined/csrf/v2-b41e31b83de62e7e0307c2c3761c85f5_1440w.jpg" alt="什么是CSRF攻击？"><br>
+如图所示，受害者会</p>
 <ul>
 <li>登录一个所信任的网站并在本地生成Cookie</li>
-<li>在不登出所信任的网站的情况下访问到另一个恶意网站</li>
+<li>在不登出所信任的网站的情况下访问到另一个恶意网站<br>
+注意：有了这两个条件，攻击者就可以发起CSRF攻击了。</li>
 </ul>
-<p>有了这两个条件，攻击者就可以发起CSRF攻击了。</p>
 <h3 id="实验步骤">实验步骤</h3>
 <h4 id="实验环境">实验环境</h4>
-<p>最后防御方法：验证码、Referer Check、Token 验证</p>
+<p>ubuntu seed 16.04</p>
+<h4 id="任务1">任务1</h4>
+<h4 id="任务2">任务2</h4>
+<h4 id="任务3">任务3</h4>
+<h4 id="任务4">任务4</h4>
 
 
         <hr>
@@ -623,7 +628,7 @@ web安全作为前端的必会八股，在面试中的考察频率非常高，�
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFCSRF%EF%BC%9F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">什么是CSRF？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">实验步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">实验环境</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFCSRF%EF%BC%9F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">什么是CSRF？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">实验步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">实验环境</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A11"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">任务1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A12"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">任务2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A13"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">任务3</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A14"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">任务4</span></a></li></ol></li></ol>
         
         </div>
       </aside>
