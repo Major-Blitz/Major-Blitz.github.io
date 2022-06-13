@@ -59,7 +59,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="It&#39;s an IT blog..."/>
   <meta name="keyword" content="v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
-  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+  <link rel="shortcut icon" href="/img/avatar/icon2.jpg"/>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
@@ -237,20 +237,9 @@
           
           
           <li>
-            <a href="/archive/">
+            <a href="/about/">
               
-              ARCHIVES
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/categories/">
-              
-              CATEGORIES
+              ABOUT
               
               
             </a>
@@ -270,9 +259,20 @@
           
           
           <li>
-            <a href="/about/">
+            <a href="/archive/">
               
-              ABOUT
+              ARCHIVES
+              
+              
+            </a>
+          </li>
+          
+          
+          
+          <li>
+            <a href="/categories/">
+              
+              CATEGORIES
               
               
             </a>
@@ -342,26 +342,22 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/bridge.jpg');
-      --intro-header-background-image-url-post: url('csrf/header.png');
-      --intro-header-background-image-url-page: url('/csrf/header.png');
+      --intro-header-background-image-url-post: url('https://github.com/Major-Blitz/blog-pics/blob/main/header.png');
+      --intro-header-background-image-url-page: url('/https://github.com/Major-Blitz/blog-pics/blob/main/header.png');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/bridge.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('csrf/header.png');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/csrf/header.png');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://github.com/Major-Blitz/blog-pics/blob/main/header.png');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/https://github.com/Major-Blitz/blog-pics/blob/main/header.png');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url('csrf/header.png'); */
+        /* background-image: url('https://github.com/Major-Blitz/blog-pics/blob/main/header.png'); */
       
     }
 
-    
-      #signature {/*signature*/
-        background-image: url('/img/signature/vincent-white.png');
-      }
     
   </style>
 
@@ -383,7 +379,7 @@
               
             </div>
             <h1>Web安全——CSRF</h1>
-            <h2 class="subheading">HUST CSE web安全实验</h2>
+            <h2 class="subheading">web安全实验</h2>
             <span class="meta">
               Posted by Alfred Liu on
               2022-06-12
@@ -398,7 +394,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">320</span> In Total
+              Words <span class="post-count">348</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -460,7 +456,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="写在前面：">写在前面：</h3>
+        <h3 id="写在前面">写在前面</h3>
 <p>web安全作为前端的必会八股，在面试中的考察频率非常高，之前面试的时候就被问到了，还记得如下的对话。<br>
 面试官：聊一下常见的web安全<br>
 我：有CSRF，balabala、XSS，bababa…<br>
@@ -479,10 +475,10 @@
 <h3 id="实验步骤">实验步骤</h3>
 <h4 id="实验环境">实验环境</h4>
 <p>ubuntu seed 16.04</p>
-<h4 id="任务1">任务1</h4>
-<h4 id="任务2">任务2</h4>
-<h4 id="任务3">任务3</h4>
-<h4 id="任务4">任务4</h4>
+<h4 id="任务1-：基于-GET-请求的-CSRF-攻击">任务1 ：基于 GET 请求的 CSRF 攻击</h4>
+<h4 id="任务2-：使用-POST-请求的-CSRF-攻击">任务2 ：使用 POST 请求的 CSRF 攻击</h4>
+<h4 id="任务3-：实现-login-CSRF-攻击">任务3 ：实现 login CSRF 攻击</h4>
+<h4 id="任务4-：防御策略">任务4 ：防御策略</h4>
 
 
         <hr>
@@ -628,7 +624,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFCSRF%EF%BC%9F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">什么是CSRF？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">实验步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">实验环境</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A11"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">任务1</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A12"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">任务2</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A13"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">任务3</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A14"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">任务4</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">写在前面</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFCSRF%EF%BC%9F"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">什么是CSRF？</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">实验步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">实验环境</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A11-%EF%BC%9A%E5%9F%BA%E4%BA%8E-GET-%E8%AF%B7%E6%B1%82%E7%9A%84-CSRF-%E6%94%BB%E5%87%BB"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">任务1 ：基于 GET 请求的 CSRF 攻击</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A12-%EF%BC%9A%E4%BD%BF%E7%94%A8-POST-%E8%AF%B7%E6%B1%82%E7%9A%84-CSRF-%E6%94%BB%E5%87%BB"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">任务2 ：使用 POST 请求的 CSRF 攻击</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A13-%EF%BC%9A%E5%AE%9E%E7%8E%B0-login-CSRF-%E6%94%BB%E5%87%BB"><span class="toc-nav-number">3.4.</span> <span class="toc-nav-text">任务3 ：实现 login CSRF 攻击</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E4%BB%BB%E5%8A%A14-%EF%BC%9A%E9%98%B2%E5%BE%A1%E7%AD%96%E7%95%A5"><span class="toc-nav-number">3.5.</span> <span class="toc-nav-text">任务4 ：防御策略</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -754,7 +750,7 @@
 
           
             <li>
-              <a target="_blank" href="https://twitter.com/V_Vincen_">
+              <a target="_blank" href="https://twitter.com/name">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
